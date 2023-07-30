@@ -6,8 +6,8 @@ const COLORS = {
 };
 
 const SIGN = {
-  1: "🌚",
-  "-1": "🌝",
+  1: "X",
+  "-1": "O",
   0: "",
 };
 
@@ -46,6 +46,7 @@ function renderBoard() {
     const cellId = `c${cellIdx}`;
     const cellEl = document.querySelector(`#${cellId}`);
     cellEl.innerHTML = SIGN[cell];
+    cellEl.style.color = COLORS[cell];
   });
 }
 
@@ -53,9 +54,9 @@ function renderMessage() {
   if (winner === "T") {
     messageEl.innerHTML = "It's a tie!";
   } else if (winner) {
-    messageEl.innerHTML = `${SIGN[winner]} win! `;
+    messageEl.innerHTML = `<span style="color: ${COLORS[winner]}">${SIGN[winner]}</span> win! `;
   } else {
-    messageEl.innerHTML = `It's your turn ${SIGN[turn]} `;
+    messageEl.innerHTML = `It's your turn <span style="color: ${COLORS[turn]}">${SIGN[turn]}</span> `;
   }
   playAgainBtn.style.visibility = winner ? "visible" : "hidden";
 }

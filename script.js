@@ -62,12 +62,11 @@ function renderMessage() {
 }
 
 function handleClick(e) {
-  console.log(e);
-  console.log(board);
-  e.target.innerHTML = `${SIGN[turn]}`;
   const cellIdx = boardCells.indexOf(e.target);
   console.log(cellIdx);
   if (cellIdx === -1) return;
+  if (board[cellIdx] !== 0) return;
+  e.target.innerHTML = `${SIGN[turn]}`;
   board[cellIdx] = turn;
   winner = getWinner();
   turn *= -1;

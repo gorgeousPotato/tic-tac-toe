@@ -10,16 +10,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f6f4eb;
+  background-color: #fcffe7;
 }
 
 header {
   font-size: 4vmin;
-  color: #235b81;
+  color: #2b3467;
 }
 
 h1 {
-  color: #749bc2;
+  color: #2b3467;
   font-size: 3vmin;
 }
 
@@ -33,7 +33,7 @@ h1 {
 }
 
 #board > div {
-  border: 0.4vmin solid #91c8e4;
+  border: 0.4vmin solid #bad7e9;
   font-size: 8vmin;
   height: 12vmin;
   width: 12vmin;
@@ -41,7 +41,7 @@ h1 {
 }
 
 #board > div:hover {
-  background-color: #ddf1fb;
+  background-color: #bad7e9;
 }
 
 button {
@@ -50,13 +50,13 @@ button {
   font-size: 2vmin;
   border-radius: 100px;
   border: none;
-  color: #f6f4eb;
-  background-color: #235b81;
+  color: #fcffe7;
+  background-color: #2b3467;
 }
 
 button:hover {
-  color: #235b81;
-  background-color: #91c8e4;
+  color: #2b3467;
+  background-color: #bad7e9;
 }
 
 /* p {
